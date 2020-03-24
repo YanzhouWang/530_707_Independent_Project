@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="needle_segment" params="pre_name name radius length u_limit">
+    <joint name="${name}_fixed" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 ${length}"/>
+      <parent link="${pre_name}"/>
+      <child link="${name}_fake_1"/>
+    </joint>
+    <link name="${name}_fake_1"/>
+    <joint name="${name}_joint_1" type="revolute">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="${name}_fake_1"/>
+      <child link="${name}_fake_2"/>
+      <axis xyz="1 0 0"/>
+      <limit upper="${u_limit}" lower="0" effort="1" velocity="1"/>
+    </joint>
+    <link name="${name}_fake_2"/>
+     <joint name="${name}_joint_2" type="revolute">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="${name}_fake_2"/>
+      <child link="${name}"/>
+      <axis xyz="0 1 0"/>
+      <limit upper="${u_limit}" lower="0" effort="1" velocity="1"/>
+     </joint>
+     <link name="${name}">
+       <visual>
+	 <origin rpy="0 0 0" xyz="0 0 ${length/2}"/>
+	 <geometry>
+	   <cylinder radius="${radius}" length="${length}"/>
+	 </geometry>
+       </visual>
+     </link>
+  </xacro:macro>
+  
+
+</robot>

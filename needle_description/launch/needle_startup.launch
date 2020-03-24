@@ -1,0 +1,10 @@
+<launch>
+  <group ns="needle">
+    <include file="$(find needle_description)/launch/needle_upload.launch"/>
+    <node name="robot_state_publisher" type="robot_state_publisher" pkg="robot_state_publisher"/>
+    <node name="joint_state_publisher" type="joint_state_publisher" pkg="joint_state_publisher">
+      <param name="use_gui" value="true"/>
+    </node>
+  </group>
+  <node name="rviz" type="rviz" pkg="rviz" args="-d $(find needle_description)/launch/config.rviz"/>
+</launch>

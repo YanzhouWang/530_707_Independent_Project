@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot name="Needle" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find needle_description)/urdf/needle.xacro"/>
+  <link name="world"/>
+  <xacro:needle_segment pre_name="world" name="seg1" radius="0.01" length="0.25" u_limit="0.3"/>
+  <xacro:needle_segment pre_name="seg1" name="seg2" radius="0.01" length="0.25" u_limit="0.3"/>
+  <xacro:needle_segment pre_name="seg2" name="seg3" radius="0.01" length="0.25" u_limit="0.3"/>
+  <xacro:needle_segment pre_name="seg3" name="seg4" radius="0.01" length="0.25" u_limit="0.3"/>
+  <xacro:needle_segment pre_name="seg4" name="seg5" radius="0.01" length="0.25" u_limit="0.3"/>
+  <xacro:needle_segment pre_name="seg5" name="seg6" radius="0.01" length="0.25" u_limit="0.3"/>
+  <xacro:needle_segment pre_name="seg6" name="seg7" radius="0.01" length="0.25" u_limit="0.3"/>
+  <xacro:needle_segment pre_name="seg7" name="seg8" radius="0.01" length="0.25" u_limit="0.3"/>
+  <xacro:needle_segment pre_name="seg8" name="seg9" radius="0.01" length="0.25" u_limit="0.3"/>
+  <xacro:needle_segment pre_name="seg9" name="seg10" radius="0.01" length="0.25" u_limit="0.3"/>
+  <xacro:needle_segment pre_name="seg10" name="seg11" radius="0.01" length="0.25" u_limit="0.3"/>
+  <xacro:needle_segment pre_name="seg11" name="seg12" radius="0.01" length="0.25" u_limit="0.3"/>
+  <xacro:needle_segment pre_name="seg12" name="seg13" radius="0.01" length="0.25" u_limit="0.3"/>
+  <xacro:needle_segment pre_name="seg13" name="seg14" radius="0.01" length="0.25" u_limit="0.3"/>
+  <xacro:needle_segment pre_name="seg14" name="seg15" radius="0.01" length="0.25" u_limit="0.3"/>
+
+</robot>

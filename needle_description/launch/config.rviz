@@ -8,6 +8,7 @@ Panels:
         - /Status1
         - /TF1
         - /RobotModel1
+        - /RobotModel1/Links1/needle_tip1
       Splitter Ratio: 0.5
     Tree Height: 565
   - Class: rviz/Selection
@@ -57,7 +58,45 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
+        needle_tip:
+          Value: true
         seg1:
+          Value: true
+        seg10:
+          Value: true
+        seg10_fake_1:
+          Value: true
+        seg10_fake_2:
+          Value: true
+        seg11:
+          Value: true
+        seg11_fake_1:
+          Value: true
+        seg11_fake_2:
+          Value: true
+        seg12:
+          Value: true
+        seg12_fake_1:
+          Value: true
+        seg12_fake_2:
+          Value: true
+        seg13:
+          Value: true
+        seg13_fake_1:
+          Value: true
+        seg13_fake_2:
+          Value: true
+        seg14:
+          Value: true
+        seg14_fake_1:
+          Value: true
+        seg14_fake_2:
+          Value: true
+        seg15:
+          Value: true
+        seg15_fake_1:
+          Value: true
+        seg15_fake_2:
           Value: true
         seg1_fake_1:
           Value: true
@@ -104,6 +143,12 @@ Visualization Manager:
         seg8_fake_1:
           Value: true
         seg8_fake_2:
+          Value: true
+        seg9:
+          Value: true
+        seg9_fake_1:
+          Value: true
+        seg9_fake_2:
           Value: true
         world:
           Value: true
@@ -138,7 +183,29 @@ Visualization Manager:
                                                     seg8_fake_1:
                                                       seg8_fake_2:
                                                         seg8:
-                                                          {}
+                                                          seg9_fake_1:
+                                                            seg9_fake_2:
+                                                              seg9:
+                                                                seg10_fake_1:
+                                                                  seg10_fake_2:
+                                                                    seg10:
+                                                                      seg11_fake_1:
+                                                                        seg11_fake_2:
+                                                                          seg11:
+                                                                            seg12_fake_1:
+                                                                              seg12_fake_2:
+                                                                                seg12:
+                                                                                  seg13_fake_1:
+                                                                                    seg13_fake_2:
+                                                                                      seg13:
+                                                                                        seg14_fake_1:
+                                                                                          seg14_fake_2:
+                                                                                            seg14:
+                                                                                              seg15_fake_1:
+                                                                                                seg15_fake_2:
+                                                                                                  seg15:
+                                                                                                    needle_tip:
+                                                                                                      {}
       Update Interval: 0
       Value: true
     - Alpha: 0.5
@@ -151,11 +218,93 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        needle_tip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         seg1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
+        seg10:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        seg10_fake_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        seg10_fake_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        seg11:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        seg11_fake_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        seg11_fake_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        seg12:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        seg12_fake_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        seg12_fake_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        seg13:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        seg13_fake_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        seg13_fake_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        seg14:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        seg14_fake_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        seg14_fake_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        seg15:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        seg15_fake_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        seg15_fake_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         seg1_fake_1:
           Alpha: 1
           Show Axes: false
@@ -252,6 +401,19 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
         seg8_fake_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        seg9:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        seg9_fake_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        seg9_fake_2:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -290,7 +452,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 8.80000019
+      Distance: 10
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1

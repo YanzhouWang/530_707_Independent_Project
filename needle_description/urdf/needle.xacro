@@ -31,6 +31,12 @@
        </visual>
      </link>
   </xacro:macro>
-  
+
+  <xacro:macro name="needle_seg_loop" params="pre_name name radius length u_limit qty">
+   <xacro:needle_segment pre_name="${pre_name}_${qty-1}" name="${pre_name}_${qty}" radius="${radius}" length="${length}" u_limit="${u_limit}"/>
+   <xacro:if value="${qty-1}">
+     <xacro:needle_seg_loop pre_name="${pre_name}" name="${name}" radius="${radius}" length="${length}" u_limit="${u_limit}"  qty="${qty-1}"/>
+   </xacro:if>
+  </xacro:macro>
 
 </robot>

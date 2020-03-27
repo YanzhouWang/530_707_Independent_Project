@@ -4,7 +4,7 @@ Final project space for JHU RSP
 Project report can be found here: https://www.dropbox.com/s/p3oeg2vh7b18fnu/Final_Project.html?dl=0
 
 # Package Description and Usage (continuously updated)
-Please note that all units are in ROS default base unit, which is specified here:[Sites Using React](https://www.ros.org/reps/rep-0103.html)
+Please note that all units are in ROS default [base unit](https://www.ros.org/reps/rep-0103.html).
 
 ## needle_description
 Contains the URDF of a needle model. Adjustable parameters include: needle length, needle diamter, approximated maximum curvature, and number of needle segments in the mesh.

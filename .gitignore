@@ -1,3 +1,4 @@
 # ignore all temp files
 *~
 \#*\#
+point_publisher/

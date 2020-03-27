@@ -85,36 +85,30 @@ Visualization Manager:
           Value: false
         seg_4_fake_2:
           Value: false
-        seg_5:
-          Value: false
-        seg_5_fake_1:
-          Value: false
-        seg_5_fake_2:
-          Value: false
+        world:
+          Value: true
       Marker Scale: 0.100000001
       Name: TF
       Show Arrows: false
       Show Axes: false
       Show Names: false
       Tree:
-        seg_0:
-          seg_1_fake_1:
-            seg_1_fake_2:
-              seg_1:
-                seg_2_fake_1:
-                  seg_2_fake_2:
-                    seg_2:
-                      seg_3_fake_1:
-                        seg_3_fake_2:
-                          seg_3:
-                            seg_4_fake_1:
-                              seg_4_fake_2:
-                                seg_4:
-                                  seg_5_fake_1:
-                                    seg_5_fake_2:
-                                      seg_5:
-                                        needle_tip:
-                                          {}
+        world:
+          seg_0:
+            seg_1_fake_1:
+              seg_1_fake_2:
+                seg_1:
+                  seg_2_fake_1:
+                    seg_2_fake_2:
+                      seg_2:
+                        seg_3_fake_1:
+                          seg_3_fake_2:
+                            seg_3:
+                              seg_4_fake_1:
+                                seg_4_fake_2:
+                                  seg_4:
+                                    needle_tip:
+                                      {}
       Update Interval: 0
       Value: true
     - Alpha: 0.5
@@ -187,16 +181,7 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        seg_5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        seg_5_fake_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        seg_5_fake_2:
+        world:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -210,7 +195,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: seg_0
+    Fixed Frame: world
     Frame Rate: 30
   Name: root
   Tools:
@@ -246,10 +231,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.685398221
+      Pitch: 0.340398103
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.22039783
+      Yaw: 1.30039775
     Saved: ~
 Window Geometry:
   Displays:

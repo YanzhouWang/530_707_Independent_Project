@@ -29,6 +29,12 @@
 	   <cylinder radius="${radius}" length="${length}"/>
 	 </geometry>
        </visual>
+       <collision>
+	 <origin rpy="0 0 0" xyz="0 0 ${length/2}"/>
+	 <geometry>
+	   <cylinder radius="${radius}" length="${length}"/>
+	 </geometry>
+       </collision>
      </link>
   </xacro:macro>
 
@@ -39,7 +45,15 @@
    </xacro:if>
   </xacro:macro>
 
-  <xacro:macro name="needle_constructor" params="aprx_crv ndl_len ndl_dia n_seg">
+  <xacro:macro name="needle_constructor" params="aprx_crv ndl_len ndl_dia n_seg parent=world">
+    <xacro:if value="${parent=='world'}">
+      <link name="${parent}"/>
+    </xacro:if>
+    <joint name="${parent}_fixed_joint" type="fixed">
+      <origin rpy = "0 0 0" xyz="0 0 ${-ndl_len/n_seg}"/>
+      <parent link="${parent}"/>
+      <child link="seg_0"/>
+    </joint>
     <link name="seg_0"/>
     <xacro:needle_seg_loop pre_name="seg" name="seg" radius="${ndl_dia/2}" length="${ndl_len/n_seg}" joint_limit="${aprx_crv*ndl_len/n_seg/2}" qty="${n_seg}"/>
     <joint name="needle_tip_joint" type="fixed">

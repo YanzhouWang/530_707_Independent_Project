@@ -18,3 +18,5 @@ Contains the URDF of a plain UR5 with a needle attached at its tool0 link.
 
 ## path_generator
 A node that requires a planning environment (MoveIt! and a robot) and visualizes the planned path for a specific link of the robot in RViz. The topic needs to be remapped to whichever topic that returns the planned path in message type moveit_msg/DisplayTrajectory. Upon initialization, the node asks for the Root link (usually world, base, or base_link) of the kinematic chain, then the EE link of the kinematic chain, which is the link of interest and does not have to be the actual end effector. In RViz, simply add a Path display and subsribe to the correct topic (/ee_path by default) to visualize the planned path. Every time a planning request is sent and a solution is found, the path should appear on the screen.
+
+This package will likely be replaced by a MoveIt/RViz plugin that does the same thing but only better. 

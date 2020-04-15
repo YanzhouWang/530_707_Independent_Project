@@ -1,16 +1,15 @@
 #include <path_generator/path_generator.hpp>
 
 PathGenerator::PathGenerator(ros::NodeHandle& nh): nh_(nh){
-  ROS_INFO("In path converter constructor.");
+  path_pub_=nh.advertise<nav_msgs::Path>("ee_path",1,true);
   std::cout<<"Root name: ";
   std::cin>>root_name_;
   std::cout<<"EE name: ";
   std::cin>>ee_name_;
-  path_pub_=nh.advertise<nav_msgs::Path>("ee_path",1,true);
+
 }
 
 PathGenerator::~PathGenerator(){
-  ROS_INFO("In path converter destructor.");
   delete kdlfk_;
 }
 

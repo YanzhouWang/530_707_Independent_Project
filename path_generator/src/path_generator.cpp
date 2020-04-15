@@ -1,4 +1,7 @@
 #include <path_generator/path_generator.hpp>
+#include <cmath>
+
+#define MIN_JNT_VAL 0.000001
 
 PathGenerator::PathGenerator(ros::NodeHandle& nh): nh_(nh){
   path_pub_=nh.advertise<nav_msgs::Path>("ee_path",1,true);
@@ -48,14 +51,21 @@ void PathGenerator::startSub(){
 void PathGenerator::traj_callback(const moveit_msgs::DisplayTrajectory& msg){
   int num_msgs=msg.trajectory[0].joint_trajectory.points.size();
   int num_joints=chain_.getNrOfJoints();
+  int num_joints_received=msg.trajectory[0].joint_trajectory.points[0].positions.size();
+  if(num_joints>num_joints_received){
+    ROS_WARN_STREAM("The number of joint positions received "<<num_joints_received<<" is less than the number of joints in the chain "<<num_joints<<". Is the planning group part of the chain?");
+    ROS_INFO("Ignoring excess joint values");
+  }
   nav_msgs::Path path;
   std::string frame_id = msg.trajectory[0].joint_trajectory.header.frame_id;
   path.poses.resize(num_msgs);
   q_in_.resize(num_joints);
   for(size_t i=0; i<num_msgs; i++){ //for each msg
-    for(size_t j=0; j<num_joints; j++){
+    for(size_t j=0; j<num_joints_received; j++){
       q_in_(j)=msg.trajectory[0].joint_trajectory.points[i].positions[j]; //filling joint array
+      //std::cout<<q_in_(j)<<" ";
     }
+    //std::cout<<std::endl;
     // use each q_in_ to calculate FK
     kdlfk_->JntToCart(q_in_,p_out_);
     KDL::Vector V=p_out_.p;
@@ -65,7 +75,7 @@ void PathGenerator::traj_callback(const moveit_msgs::DisplayTrajectory& msg){
     path.poses[i].pose.position.y=V[1];
     path.poses[i].pose.position.z=V[2];
     
-    //    std::cout<<V[0]<<" "<<V[1]<<" "<<V[2]<<std::endl;
+    std::cout<<V[0]<<" "<<V[1]<<" "<<V[2]<<std::endl;
   }
   path.header.frame_id=frame_id;
   path_pub_.publish(path);

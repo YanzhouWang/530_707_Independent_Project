@@ -1,0 +1,10 @@
+<library path="libtraj_visualization_plugin">
+  <class name="trajectory_display_ns/Trajectory"
+	 type="trajectory_display_ns::trajectory_display"
+	 base_class_type="rviz::Display">
+    <description>
+      Plugin to visualize MoveIt! planned path.
+    </description>
+    <message_type>display_trajectory_msgs/DisplayTrajectoryStamped</message_type> 
+  </class>
+</library>

@@ -1,0 +1,2 @@
+std_msgs/Header header
+moveit_msgs/DisplayTrajectory moveit_display_trajectory

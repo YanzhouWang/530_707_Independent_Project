@@ -1,0 +1,59 @@
+controller_list:
+  - name: fake_UR5_controller
+    joints:
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+  - name: fake_Needle_controller
+    joints:
+      - seg_1_joint_1
+      - seg_1_joint_2
+      - seg_2_joint_1
+      - seg_2_joint_2
+      - seg_3_joint_1
+      - seg_3_joint_2
+      - seg_4_joint_1
+      - seg_4_joint_2
+      - seg_5_joint_1
+      - seg_5_joint_2
+      - seg_6_joint_1
+      - seg_6_joint_2
+      - seg_7_joint_1
+      - seg_7_joint_2
+      - seg_8_joint_1
+      - seg_8_joint_2
+      - seg_9_joint_1
+      - seg_9_joint_2
+      - seg_10_joint_1
+      - seg_10_joint_2
+  - name: fake_UR5Needle_controller
+    joints:
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+      - seg_1_joint_1
+      - seg_1_joint_2
+      - seg_2_joint_1
+      - seg_2_joint_2
+      - seg_3_joint_1
+      - seg_3_joint_2
+      - seg_4_joint_1
+      - seg_4_joint_2
+      - seg_5_joint_1
+      - seg_5_joint_2
+      - seg_6_joint_1
+      - seg_6_joint_2
+      - seg_7_joint_1
+      - seg_7_joint_2
+      - seg_8_joint_1
+      - seg_8_joint_2
+      - seg_9_joint_1
+      - seg_9_joint_2
+      - seg_10_joint_1
+      - seg_10_joint_2

@@ -1,0 +1,16 @@
+planner_configs:
+  RRTNeedlePlanner:
+    type: RRTNeedlePlanner # an RRT planner for needle steering
+    goal_bias: 0.0 # How often to sample the goal
+    goal_region: 1.0 # Region that is considered as reaching the goal
+    sampling_region: 0.0 # If sampling around the goal area, set this value above 0.0
+    integration_steps: 10 # Number of 4th-order Runge-Kutta iterations to run for each system time step
+    system_time_step: 0.5 # Discretization of time space for system simulation
+    bounding_box_size: 0.0 # Region surrouding the actual needle that is considered "in contact" with the needle, for collision detection
+    curvature: 0.3 # Maximum curvature of the needle, ideally this should be the same as in the needle description
+    rot_spd_top: 2 # Maximum rotation speed allowed
+    rot_spd_bot: -2 # Minimum rotation speed allowed
+    rot_speeds: 10 # Number of discrete turning angles to consider
+    ins_spd_top: 1 # Maximum insertion speed allowed
+    ins_spd_bot: 0 # Minimum insertion speed allowed
+    ins_speeds: 10 # Number of discrete insertion speeds to consider 

@@ -54,6 +54,8 @@
     <arg name="moveit_warehouse_database_path" value="$(arg db_path)"/>
   </include>
 
+
+  <!-- Launch display_trajecotry_msg_converter and remap the topic-->
   <node name="display_trajectory_msg_converter" pkg="display_trajectory_msg_converter" type="display_trajectory_msg_converter_node">
     <remap from="planned_path" to="/move_group/display_planned_path"/>
   </node>

@@ -1,0 +1,7 @@
+<library path="libneedle_planner_manager">
+  <class name="needle_planning_interface/NeedlePlannerManager"
+	 type="needle_planning_interface::NeedlePlannerManager"
+	 base_class_type="planning_interface::PlannerManager"/>
+  <description>
+  </description>
+</library>
